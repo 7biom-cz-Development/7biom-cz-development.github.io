@@ -3,3 +3,6 @@ _Již brzy..._
 
 ## Veřejné zdrojové kódy
 * [Notch Discord Bot](Notch-Discord-Bot)
+
+## Veřejná JSON schémata
+* [`Notch/locale.json`](json/schemas/Notch/locale.json)
