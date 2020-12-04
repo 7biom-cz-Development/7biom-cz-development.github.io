@@ -12,6 +12,11 @@
         "locales": {
             "type": "object",
             "properties": {}
+        },
+        "comment": {
+            "type": "string"
         }
-    }
+    },
+    "required": ["name", "author", "locales"],
+    "additionalProperties": {"type": "string"}
 }
