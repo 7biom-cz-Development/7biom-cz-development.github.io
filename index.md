@@ -6,3 +6,4 @@ _Již brzy..._
 
 ## Veřejná JSON schémata
 * [`Notch/locale.json`](json/schemas/Notch/locale.json)
+* [`Notch/help.json`](json/schemas/Notch/help.json)
