@@ -9,12 +9,53 @@
         "author": {
             "type": "string"
         },
-        "locales": {
-            "type": "object",
-            "properties": {}
-        },
         "comment": {
             "type": "string"
+        },
+        "locales": {
+            "type": "object",
+            "properties": {
+                "command": {
+                    "type": "object",
+                    "properties": {
+                        "help": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "additionalProperties": false
+                        },
+                        "ping": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["help", "ping"],
+                    "additionalProperties": false
+                },
+                "event": {
+                    "type": "object",
+                    "properties": {
+                        "member": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "additionalProperties": false
+                        },
+                        "guild": {
+                            "type": "object",
+                            "properties": {},
+                            "required": [],
+                            "additionalProperties": false
+                        }
+                    },
+                    "required": ["member", "guild"],
+                    "additionalProperties": false
+                }
+            },
+            "required": ["command", "event"],
+            "additionalProperties": false
         }
     },
     "required": ["name", "author", "locales"],

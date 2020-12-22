@@ -2,6 +2,45 @@
     "$schema": "http://json-schema.org/draft/2019-09/schema#",
     "$id": "https://github.7biom.cz/json/schemas/Notch/help.json",
     "type": "object",
-    "properties": {},
-    "required": []
+    "properties": {
+        "list": {
+            "type": "object",
+            "properties": {
+                "category": { "type": "string" },
+                "description": { "type": "string" },
+                "admintype": {
+                    "type": "string",
+                    "pattern": "^(none|mod|admin|dev|owner)$"
+                }
+            },
+            "required": [ "category", "description", "admintype" ],
+            "additionalProperties": false
+        },
+        "detail": {
+            "type": "object",
+            "properties": {
+                "description": { "type": "string" },
+                "args": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "name": { "type": "string" },
+                            "description": { "type": "string" },
+                            "type": {
+                                "type": "string",
+                                "pattern": "^(string|number|duration|mention|channel|subcommand)$"
+                            },
+                            "required": { "type": "boolean" }
+                        },
+                        "required": [ "name", "description", "type", "required" ],
+                        "additionalProperties": false
+                    }
+                }
+            },
+            "required": [ "description", "args" ]
+        }
+    },
+    "required": [ "list", "detail" ],
+    "additionalProperties": false
 }
